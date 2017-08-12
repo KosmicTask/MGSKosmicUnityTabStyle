@@ -55,13 +55,11 @@
             NSColor *endColor = [NSColor colorWithCalibratedRed:0.825f green:0.825f blue:0.825f alpha:1.0f];
             NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:startColor endingColor:endColor];
             [gradient drawInBezierPath:bezier angle:90.0];
-            [gradient release];
         } else if ([cell isHighlighted]) {
             NSColor *startColor = [NSColor colorWithDeviceWhite:0.650 alpha:1.000];
             NSColor *endColor = [NSColor colorWithDeviceWhite:0.650 alpha:1.000];
             NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:startColor endingColor:endColor];
             [gradient drawInBezierPath:bezier angle:90.0];
-            [gradient release];
         }
         
     } else {
@@ -72,7 +70,6 @@
             [[NSGraphicsContext currentContext] setShouldAntialias:NO];
             [gradient drawInBezierPath:bezier angle:90.0];
             [[NSGraphicsContext currentContext] setShouldAntialias:YES];
-            [gradient release];
         }
     }
     
@@ -89,7 +86,6 @@
 
     NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.760 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.660 alpha:1.0]];
     [gradient drawInRect:gradientRect angle:90.0];
-    [gradient release];
 
     
 	[[NSColor colorWithCalibratedWhite:0.500 alpha:1.0] set];
